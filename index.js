@@ -174,6 +174,9 @@ window.addEventListener("load", () => {
       video.appendChild(source);
       video.play().catch(() => {});
       videoElement.current = video;
+      const title = document.createElement("h2");
+      title.innerText = "Video";
+      document.body.appendChild(title);
       document.body.appendChild(video);
       fileInput.remove();
     });
