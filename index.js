@@ -185,7 +185,9 @@ window.addEventListener("load", () => {
   document.body.appendChild(mainCanvas);
   const gl = mainCanvas.getContext("webgl");
 
-  const draw = setupDraw(gl, mainCanvas.width, mainCanvas.height);
+  const { width, height } = mainCanvas.getBoundingClientRect();
+
+  const draw = setupDraw(gl, width, height);
 
   const loop = () => {
     // If the video element has loaded, upload it to the canvas
